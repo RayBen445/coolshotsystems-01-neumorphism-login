@@ -1,0 +1,112 @@
+/* Import a font for better aesthetics */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    --bg-color: #e0e0e0;
+    --primary-text-color: #555;
+    --shadow-light: #ffffff;
+    --shadow-dark: #bebebe;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--primary-text-color);
+}
+
+.login-container {
+    width: 350px;
+    padding: 40px;
+    border-radius: 20px;
+    background: var(--bg-color);
+    box-shadow: 10px 10px 20px var(--shadow-dark),
+                -10px -10px 20px var(--shadow-light);
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group i {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 15px 15px 50px; /* Padding for the icon */
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    font-size: 1rem;
+    background-color: var(--bg-color);
+    color: var(--primary-text-color);
+    /* Inset shadow for the "pressed in" effect */
+    box-shadow: inset 5px 5px 10px var(--shadow-dark),
+                inset -5px -5px 10px var(--shadow-light);
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    box-shadow: inset 2px 2px 5px var(--shadow-dark),
+                inset -2px -2px 5px var(--shadow-light);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    background: var(--bg-color);
+    color: var(--primary-text-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    /* "Pushed out" shadow effect */
+    box-shadow: 5px 5px 10px var(--shadow-dark),
+                -5px -5px 10px var(--shadow-light);
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    color: #3498db;
+}
+
+.login-btn:active {
+    /* "Pressed in" effect on click */
+    box-shadow: inset 5px 5px 10px var(--shadow-dark),
+                inset -5px -5px 10px var(--shadow-light);
+    color: #2980b9;
+}
+
+.forgot-password {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
